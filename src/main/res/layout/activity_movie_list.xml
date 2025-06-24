@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fondo degradado -->
+    <View
+        android:id="@+id/backgroundGradient"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Contenedor principal -->
+    <LinearLayout
+        android:id="@+id/container"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@android:color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:maxWidth="400dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Fila de Buscar y Filtrar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnBuscar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Buscar"
+                android:backgroundTint="#F5F5F5"
+                android:textColor="#212121"
+                android:padding="12dp"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:elevation="1dp"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btnFiltrar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Filtrar Género"
+                android:backgroundTint="#F5F5F5"
+                android:textColor="#212121"
+                android:padding="12dp"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:elevation="1dp" />
+        </LinearLayout>
+
+        <!-- Fila 2: Estado y Ordenar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnFiltrarEstado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Estado"
+                android:backgroundTint="#F5F5F5"
+                android:textColor="#212121"
+                android:padding="12dp"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:elevation="1dp"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btnOrdenarRating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ordenar ⭐"
+                android:backgroundTint="#F5F5F5"
+                android:textColor="#212121"
+                android:padding="12dp"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:elevation="1dp" />
+        </LinearLayout>
+
+        <!-- RecyclerView de películas -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMovies"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Restaurar lista -->
+        <Button
+            android:id="@+id/btnRestaurarLista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restaurar Lista"
+            android:backgroundTint="#F5F5F5"
+            android:textColor="#000000"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Botón volver -->
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver"
+            android:background="@android:color/transparent"
+            android:textColor="#007AFF"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

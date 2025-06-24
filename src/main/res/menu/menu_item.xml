@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Acciones principales -->
+    <item
+        android:id="@+id/action_edit"
+        android:title="Editar" />
+    <item
+        android:id="@+id/action_delete"
+        android:title="Eliminar" />
+
+    <!-- Separador visual (si usás popup menus programáticamente) -->
+    <!-- android:groupDividerEnabled="true" en PopupMenu -->
+
+    <!-- Estados -->
+    <item
+        android:id="@+id/action_marcar_vista"
+        android:title="Marcar como Vista" />
+    <item
+        android:id="@+id/action_marcar_pendiente"
+        android:title="Marcar como Pendiente" />
+    <item
+        android:id="@+id/action_marcar_favorita"
+        android:title="Marcar como Favorita" />
+</menu>
